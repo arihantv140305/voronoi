@@ -1,0 +1,643 @@
+10
+----------
+Site event (101.198 114.982)
+Beachline
+6 6
+
+event queue
+Site event (103.739 107.985)
+Site event (1.1246 105.419)
+Site event (4.1773 102.605)
+Site event (29.7191 82.8334)
+Site event (146.837 68.3803)
+Site event (84.3207 55.7503)
+Site event (144.589 44.0617)
+Site event (122.873 4.0034)
+Site event (6.5158 2.3973)
+----------
+----------
+Site event (103.739 107.985)
+Beachline
+6 1
+1 6
+
+event queue
+Site event (1.1246 105.419)
+Site event (4.1773 102.605)
+Site event (29.7191 82.8334)
+Site event (146.837 68.3803)
+Site event (84.3207 55.7503)
+Site event (144.589 44.0617)
+Site event (122.873 4.0034)
+Site event (6.5158 2.3973)
+----------
+----------
+Site event (1.1246 105.419)
+Circle inserted at leftmost end, using
+(6) (1) , the start point is (99.4 110.369)
+(4) (6) , the start point is (1.1246 633.816)
+(52.7633 40.4285)
+Beachline
+6 4
+4 6
+6 1
+1 6
+
+event queue
+Site event (4.1773 102.605)
+Site event (29.7191 82.8334)
+Site event (146.837 68.3803)
+Site event (84.3207 55.7503)
+Site event (144.589 44.0617)
+Circle event(52.7633 40.4285)
+Site event (122.873 4.0034)
+Site event (6.5158 2.3973)
+----------
+----------
+Site event (4.1773 102.605)
+NO CIRCLE ABOVE
+Circle inserted using
+(10) (4) , the start point is (4.1773 105.668)
+(4) (6) , the start point is (33.7151 292.77)
+(47.1401 86.6044)
+YES
+-90.3501 33.7151
+Beachline
+6 4
+4 10
+10 4
+4 6
+6 1
+1 6
+
+event queue
+Circle event(47.1401 86.6044)
+Site event (29.7191 82.8334)
+Site event (146.837 68.3803)
+Site event (84.3207 55.7503)
+Site event (144.589 44.0617)
+Circle event(52.7633 40.4285)
+Site event (122.873 4.0034)
+Site event (6.5158 2.3973)
+----------
+Circle event(47.1401 86.6044)
+This is b1
+(10) (4) , the start point is (47.1401 152.283)
+This is b2
+(4) (6) , the start point is (47.1401 152.283)
+The inserted point is
+(10) (6) , the start point is (47.1401 152.283)
+Circle event at 47.1401 86.6044
+NO CIRCLE ABOVE
+Time to insert a newcircle at left end
+CIRCLE MAY BE ABOVE
+Circle found and erased (52.7633 40.4285)
+Time to insert a newcircle at right end
+Circle inserted using
+(10) (6) , the start point is (47.1401 152.283)
+(6) (1) , the start point is (85.2958 105.249)
+Inserting new circle event on the right 
+(54.5633 42.992)
+Beachline
+6 4
+4 10
+10 6
+6 1
+1 6
+
+event queue
+Site event (29.7191 82.8334)
+Site event (146.837 68.3803)
+Site event (84.3207 55.7503)
+Site event (144.589 44.0617)
+Circle event(54.5633 42.992)
+Site event (122.873 4.0034)
+Site event (6.5158 2.3973)
+----------
+----------
+Site event (29.7191 82.8334)
+CIRCLE MAY BE ABOVE
+Smthd
+Circle inserted using
+(9) (10) , the start point is (29.7191 109.217)
+(10) (6) , the start point is (48.423 142.226)
+(49.3919 79.2233)
+YES
+-5.55101 48.423
+Beachline
+6 4
+4 10
+10 9
+9 10
+10 6
+6 1
+1 6
+
+event queue
+Circle event(49.3919 79.2233)
+Site event (146.837 68.3803)
+Site event (84.3207 55.7503)
+Site event (144.589 44.0617)
+Circle event(54.5633 42.992)
+Site event (122.873 4.0034)
+Site event (6.5158 2.3973)
+----------
+Circle event(49.3919 79.2233)
+This is b1
+(9) (10) , the start point is (49.3919 134.631)
+This is b2
+(10) (6) , the start point is (49.3919 134.631)
+The inserted point is
+(9) (6) , the start point is (49.3919 134.631)
+Circle event at 49.3919 79.2233
+NO CIRCLE ABOVE
+Time to insert a newcircle at left end
+CIRCLE MAY BE ABOVE
+Circle found and erased (54.5633 42.992)
+Time to insert a newcircle at right end
+Circle inserted using
+(9) (6) , the start point is (49.3919 134.631)
+(6) (1) , the start point is (80.0624 103.349)
+Inserting new circle event on the right 
+(65.7913 58.9718)
+Beachline
+6 4
+4 10
+10 9
+9 6
+6 1
+1 6
+
+event queue
+Site event (146.837 68.3803)
+Circle event(65.7913 58.9718)
+Site event (84.3207 55.7503)
+Site event (144.589 44.0617)
+Site event (122.873 4.0034)
+Site event (6.5158 2.3973)
+----------
+----------
+Site event (146.837 68.3803)
+NO CIRCLE ABOVE
+Circle inserted using
+(2) (1) , the start point is (146.837 111.633)
+(1) (6) , the start point is (163.82 133.756)
+(168.841 64.8694)
+YES
+72.4122 163.82
+Beachline
+6 4
+4 10
+10 9
+9 6
+6 1
+1 2
+2 1
+1 6
+
+event queue
+Circle event(168.841 64.8694)
+Circle event(65.7913 58.9718)
+Site event (84.3207 55.7503)
+Site event (144.589 44.0617)
+Site event (122.873 4.0034)
+Site event (6.5158 2.3973)
+----------
+Circle event(168.841 64.8694)
+This is b1
+(2) (1) , the start point is (168.841 135.579)
+This is b2
+(1) (6) , the start point is (168.841 135.579)
+The inserted point is
+(2) (6) , the start point is (168.841 135.579)
+Circle event at 168.841 64.8694
+NO CIRCLE ABOVE
+Time to insert a newcircle at left end
+Beachline
+6 4
+4 10
+10 9
+9 6
+6 1
+1 2
+2 6
+
+event queue
+Circle event(65.7913 58.9718)
+Site event (84.3207 55.7503)
+Site event (144.589 44.0617)
+Site event (122.873 4.0034)
+Site event (6.5158 2.3973)
+----------
+Circle event(65.7913 58.9718)
+This is b1
+(9) (6) , the start point is (65.7913 98.1682)
+This is b2
+(6) (1) , the start point is (65.7913 98.1682)
+The inserted point is
+(9) (1) , the start point is (65.7913 98.1682)
+Circle event at 65.7913 58.9718
+CIRCLE MAY BE ABOVE
+Time to insert a newcircle at left end
+CIRCLE MAY BE ABOVE
+Time to insert a newcircle at right end
+Circle inserted using
+(9) (1) , the start point is (65.7913 98.1682)
+(1) (2) , the start point is (125.339 88.238)
+Inserting new circle event on the right 
+(84.3297 -23.626)
+Beachline
+6 4
+4 10
+10 9
+9 1
+1 2
+2 6
+
+event queue
+Site event (84.3207 55.7503)
+Site event (144.589 44.0617)
+Site event (122.873 4.0034)
+Site event (6.5158 2.3973)
+Circle event(84.3297 -23.626)
+----------
+----------
+Site event (84.3207 55.7503)
+CIRCLE MAY BE ABOVE
+Smthd
+Circle found and erased (84.3297 -23.626)
+Circle inserted using
+(9) (1) , the start point is (66.9213 94.8429)
+(1) (8) , the start point is (84.3207 85.4768)
+(68.0483 52.2234)
+Circle inserted using
+(8) (1) , the start point is (84.3207 85.4768)
+(1) (2) , the start point is (122.621 85.2806)
+(113.003 40.3739)
+YES
+66.9213 122.621
+Beachline
+6 4
+4 10
+10 9
+9 1
+1 8
+8 1
+1 2
+2 6
+
+event queue
+Circle event(68.0483 52.2234)
+Site event (144.589 44.0617)
+Circle event(113.003 40.3739)
+Site event (122.873 4.0034)
+Site event (6.5158 2.3973)
+----------
+Circle event(68.0483 52.2234)
+This is b1
+(9) (1) , the start point is (68.0483 91.526)
+This is b2
+(1) (8) , the start point is (68.0483 91.526)
+The inserted point is
+(9) (8) , the start point is (68.0483 91.526)
+Circle event at 68.0483 52.2234
+CIRCLE MAY BE ABOVE
+Time to insert a newcircle at left end
+NO CIRCLE ABOVE
+Time to insert a newcircle at right end
+Beachline
+6 4
+4 10
+10 9
+9 8
+8 1
+1 2
+2 6
+
+event queue
+Site event (144.589 44.0617)
+Circle event(113.003 40.3739)
+Site event (122.873 4.0034)
+Site event (6.5158 2.3973)
+----------
+----------
+Site event (144.589 44.0617)
+CIRCLE MAY BE ABOVE
+Smthd
+Circle inserted using
+(1) (2) , the start point is (115.031 77.0207)
+(2) (3) , the start point is (144.589 56.3249)
+(99.8168 12.7817)
+YES
+115.031 228.782
+Beachline
+6 4
+4 10
+10 9
+9 8
+8 1
+1 2
+2 3
+3 2
+2 6
+
+event queue
+Circle event(113.003 40.3739)
+Circle event(99.8168 12.7817)
+Site event (122.873 4.0034)
+Site event (6.5158 2.3973)
+----------
+Circle event(113.003 40.3739)
+This is b1
+(8) (1) , the start point is (113.003 74.8141)
+This is b2
+(1) (2) , the start point is (113.003 74.8141)
+The inserted point is
+(8) (2) , the start point is (113.003 74.8141)
+Circle event at 113.003 40.3739
+CIRCLE MAY BE ABOVE
+Time to insert a newcircle at left end
+CIRCLE MAY BE ABOVE
+Circle found and erased (99.8168 12.7817)
+Time to insert a newcircle at right end
+Circle inserted using
+(8) (2) , the start point is (113.003 74.8141)
+(2) (3) , the start point is (134.042 57.3)
+Inserting new circle event on the right 
+(116.209 26.9006)
+Beachline
+6 4
+4 10
+10 9
+9 8
+8 2
+2 3
+3 2
+2 6
+
+event queue
+Circle event(116.209 26.9006)
+Site event (122.873 4.0034)
+Site event (6.5158 2.3973)
+----------
+Circle event(116.209 26.9006)
+This is b1
+(8) (2) , the start point is (116.209 58.9486)
+This is b2
+(2) (3) , the start point is (116.209 58.9486)
+The inserted point is
+(8) (3) , the start point is (116.209 58.9486)
+Circle event at 116.209 26.9006
+CIRCLE MAY BE ABOVE
+Time to insert a newcircle at left end
+NO CIRCLE ABOVE
+Time to insert a newcircle at right end
+Beachline
+6 4
+4 10
+10 9
+9 8
+8 3
+3 2
+2 6
+
+event queue
+Site event (122.873 4.0034)
+Site event (6.5158 2.3973)
+----------
+----------
+Site event (122.873 4.0034)
+CIRCLE MAY BE ABOVE
+Smthd
+Circle inserted using
+(8) (3) , the start point is (112.007 37.2833)
+(3) (5) , the start point is (122.873 29.919)
+(111.748 2.12189)
+YES
+112.007 191.885
+Beachline
+6 4
+4 10
+10 9
+9 8
+8 3
+3 5
+5 3
+3 2
+2 6
+
+event queue
+Site event (6.5158 2.3973)
+Circle event(111.748 2.12189)
+----------
+----------
+Site event (6.5158 2.3973)
+CIRCLE MAY BE ABOVE
+Smthd
+Circle inserted using
+(10) (9) , the start point is (-13.0394 53.9802)
+(9) (7) , the start point is (6.5158 45.9621)
+(-14.5436 -1.88514)
+Circle inserted using
+(7) (9) , the start point is (6.5158 45.9621)
+(9) (8) , the start point is (44.4578 43.9657)
+(40.5747 -11.8044)
+YES
+-13.0394 44.4578
+Beachline
+6 4
+4 10
+10 9
+9 7
+7 9
+9 8
+8 3
+3 5
+5 3
+3 2
+2 6
+
+event queue
+Circle event(111.748 2.12189)
+Circle event(-14.5436 -1.88514)
+Circle event(40.5747 -11.8044)
+----------
+Circle event(111.748 2.12189)
+This is b1
+(8) (3) , the start point is (111.748 35.9498)
+This is b2
+(3) (5) , the start point is (111.748 35.9498)
+The inserted point is
+(8) (5) , the start point is (111.748 35.9498)
+Circle event at 111.748 2.12189
+CIRCLE MAY BE ABOVE
+Time to insert a newcircle at left end
+YES
+Circle inserted using
+(9) (8) , the start point is (44.3802 43.8092)
+(8) (5) , the start point is (111.748 35.9498)
+Inserting new circle event on the left
+(-1.2898 -182.981)
+NO CIRCLE ABOVE
+Time to insert a newcircle at right end
+Beachline
+6 4
+4 10
+10 9
+9 7
+7 9
+9 8
+8 5
+5 3
+3 2
+2 6
+
+event queue
+Circle event(-14.5436 -1.88514)
+Circle event(40.5747 -11.8044)
+Circle event(-1.2898 -182.981)
+----------
+Circle event(-14.5436 -1.88514)
+This is b1
+(10) (9) , the start point is (-14.5436 52.037)
+This is b2
+(9) (7) , the start point is (-14.5436 52.037)
+The inserted point is
+(10) (7) , the start point is (-14.5436 52.037)
+Circle event at -14.5436 -1.88514
+CIRCLE MAY BE ABOVE
+Time to insert a newcircle at left end
+YES
+Circle inserted using
+(4) (10) , the start point is (-38.692 59.154)
+(10) (7) , the start point is (-14.5436 52.037)
+Inserting new circle event on the left
+(-45.9263 -20.4038)
+NO CIRCLE ABOVE
+Time to insert a newcircle at right end
+Beachline
+6 4
+4 10
+10 7
+7 9
+9 8
+8 5
+5 3
+3 2
+2 6
+
+event queue
+Circle event(40.5747 -11.8044)
+Circle event(-45.9263 -20.4038)
+Circle event(-1.2898 -182.981)
+----------
+Circle event(40.5747 -11.8044)
+This is b1
+(7) (9) , the start point is (40.5747 36.1371)
+This is b2
+(9) (8) , the start point is (40.5747 36.1371)
+The inserted point is
+(7) (8) , the start point is (40.5747 36.1371)
+Circle event at 40.5747 -11.8044
+CIRCLE MAY BE ABOVE
+Time to insert a newcircle at left end
+CIRCLE MAY BE ABOVE
+Circle found and erased (-1.2898 -182.981)
+Time to insert a newcircle at right end
+Circle inserted using
+(7) (8) , the start point is (40.5747 36.1371)
+(8) (5) , the start point is (93.8992 22.652)
+Inserting new circle event on the right 
+(64.7258 -57.3113)
+Beachline
+6 4
+4 10
+10 7
+7 8
+8 5
+5 3
+3 2
+2 6
+
+event queue
+Circle event(-45.9263 -20.4038)
+Circle event(64.7258 -57.3113)
+----------
+Circle event(-45.9263 -20.4038)
+This is b1
+(4) (10) , the start point is (-45.9263 51.3047)
+This is b2
+(10) (7) , the start point is (-45.9263 51.3047)
+The inserted point is
+(4) (7) , the start point is (-45.9263 51.3047)
+Circle event at -45.9263 -20.4038
+CIRCLE MAY BE ABOVE
+Time to insert a newcircle at left end
+CIRCLE MAY BE ABOVE
+Time to insert a newcircle at right end
+Beachline
+6 4
+4 7
+7 8
+8 5
+5 3
+3 2
+2 6
+
+event queue
+Circle event(64.7258 -57.3113)
+----------
+Circle event(64.7258 -57.3113)
+This is b1
+(7) (8) , the start point is (64.7258 0.917505)
+This is b2
+(8) (5) , the start point is (64.7258 0.917505)
+The inserted point is
+(7) (5) , the start point is (64.7258 0.917505)
+Circle event at 64.7258 -57.3113
+CIRCLE MAY BE ABOVE
+Time to insert a newcircle at left end
+CIRCLE MAY BE ABOVE
+Time to insert a newcircle at right end
+Beachline
+6 4
+4 7
+7 5
+5 3
+3 2
+2 6
+
+event queue
+----------
+
+reached here
+(4.1773 105.668) (47.1401 152.283)
+(1.1246 633.816) (47.1401 152.283)
+(29.7191 109.217) (49.3919 134.631)
+(47.1401 152.283) (49.3919 134.631)
+(146.837 111.633) (168.841 135.579)
+(103.739 111.944) (168.841 135.579)
+(49.3919 134.631) (65.7913 98.1682)
+(103.739 111.944) (65.7913 98.1682)
+(65.7913 98.1682) (68.0483 91.526)
+(84.3207 85.4768) (68.0483 91.526)
+(84.3207 85.4768) (113.003 74.8141)
+(146.837 111.633) (113.003 74.8141)
+(113.003 74.8141) (116.209 58.9486)
+(144.589 56.3249) (116.209 58.9486)
+(116.209 58.9486) (111.748 35.9498)
+(122.873 29.919) (111.748 35.9498)
+(29.7191 109.217) (-14.5436 52.037)
+(6.5158 45.9621) (-14.5436 52.037)
+(6.5158 45.9621) (40.5747 36.1371)
+(68.0483 91.526) (40.5747 36.1371)
+(4.1773 105.668) (-45.9263 51.3047)
+(-14.5436 52.037) (-45.9263 51.3047)
+(40.5747 36.1371) (64.7258 0.917505)
+(111.748 35.9498) (64.7258 0.917505)
+(1.1246 633.816) (-23237.2 243814)
+(-45.9263 51.3047) (-995.117 1.63266)
+(64.7258 0.917505) (71.5944 -496.689)
+(122.873 29.919) (743.191 -306.368)
+(144.589 56.3249) (1108.72 -32.8071)
+(168.841 135.579) (2720.81 2634.84)

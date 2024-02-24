@@ -2,6 +2,7 @@
 #include <algorithm>
 #include <cmath>
 #include<iostream>
+#include <fstream>
 using namespace std;
 
 #include<bits/stdc++.h>
@@ -12,11 +13,29 @@ struct Event;
 struct Point {
     double x;
     double y;
+    int index;
     Event* circle_event;
     Point(){};
+    Point(double x, double y, int index) : x(x), y(y), index(index) {}
     Point(double x, double y) : x(x), y(y) {}
     bool operator==(const Point& other) const {
         return std::abs(x - other.x) < epsilon && std::abs(y - other.y) < epsilon;
+    }
+    void printit(){
+        cout<<"("<<x<<" "<<y<<")"<<endl;
+    }
+};
+
+struct Edge{
+    Point start;
+    Point end;
+    bool is_infinite = false;  
+    bool is_left_edge = false;
+    bool is_right_edge = false;  
+    Edge(Point start, Point end) : start(start), end(end) {}
+    Edge(){};
+    void printit(){
+        cout<<"("<<start.x<<" "<<start.y<<")"<<" ("<<end.x<<" "<<end.y<<")"<<endl;
     }
 };
 
@@ -24,9 +43,22 @@ struct Point {
 struct breakpoint {
     public:
     Point f1, f2;
-
+    Edge edge;
     breakpoint(Point f1, Point f2) : f1(f1), f2(f2) {
         calculate_intersection();
+
+        edge.start = get_current_intersection_point();
+    }
+    Point get_current_intersection_point(){
+        double x = calculate_intersection();
+        double y;
+        // calculate y from the parabola equation
+        Point focus;
+        if(f1.y == directrix) focus = f2;
+        else focus = f1;
+        y = (focus.y*focus.y - directrix*directrix + (focus.x - x)*(focus.x - x))/(2*(focus.y - directrix));
+        
+        return Point(x, y);
     }
     breakpoint(){};
     double calculate_intersection() const {
@@ -52,9 +84,24 @@ struct breakpoint {
     }
     
     void printit(){
-        cout<<"("<<f1.x<<" "<<f1.y<<")"<<" ("<<f2.x<<" "<<f2.y<<")->"<<calculate_intersection()<<endl;
+        cout<<"("<<f1.index<<")"<<" ("<<f2.index<<") , the start point is ("<<get_current_intersection_point().x<<" "<<get_current_intersection_point().y<<")"<<endl;
     }
 };
+
+Point getCircumcentre(Point a, Point b, Point c){
+    double x1 = a.x, y1 = a.y;
+    double x2 = b.x, y2 = b.y;
+    double x3 = c.x, y3 = c.y;
+
+    double A = x1 * (y2 - y3) - y1 * (x2 - x3) + x2 * y3 - x3 * y2;
+    double B = (x1 * x1 + y1 * y1) * (y3 - y2) + (x2 * x2 + y2 * y2) * (y1 - y3) + (x3 * x3 + y3 * y3) * (y2 - y1);
+    double C = (x1 * x1 + y1 * y1) * (x2 - x3) + (x2 * x2 + y2 * y2) * (x3 - x1) + (x3 * x3 + y3 * y3) * (x1 - x2);
+
+    double centerX = -B / (2 * A);
+    double centerY = -C / (2 * A);
+
+    return Point(centerX, centerY);
+}
 
 Point getCircleEvent(breakpoint l, breakpoint r){
     if(!(l.f2 == r.f1)){
@@ -64,18 +111,10 @@ Point getCircleEvent(breakpoint l, breakpoint r){
         exit(0);
     }
     Point p1 = l.f1, p2 = l.f2, p3 = r.f2;
-    // Find lowest point of circumcircle of p1, p2, p3
-    double x1 = p1.x, y1 = p1.y;
-    double x2 = p2.x, y2 = p2.y;
-    double x3 = p3.x, y3 = p3.y;
-
-    double A = x1 * (y2 - y3) - y1 * (x2 - x3) + x2 * y3 - x3 * y2;
-    double B = (x1 * x1 + y1 * y1) * (y3 - y2) + (x2 * x2 + y2 * y2) * (y1 - y3) + (x3 * x3 + y3 * y3) * (y2 - y1);
-    double C = (x1 * x1 + y1 * y1) * (x2 - x3) + (x2 * x2 + y2 * y2) * (x3 - x1) + (x3 * x3 + y3 * y3) * (x1 - x2);
-
-    double centerX = -B / (2 * A);
-    double centerY = -C / (2 * A);
-
+    double x1 = p1.x;double y1 = p1.y;
+    Point center = getCircumcentre(p1, p2, p3);
+    double centerX = center.x;
+    double centerY = center.y;
     double radius = sqrt((x1 - centerX) * (x1 - centerX) + (y1 - centerY) * (y1 - centerY));
     return Point(centerX, centerY - radius);
 }
@@ -114,9 +153,10 @@ class Beachline{
     // };
     multiset<breakpoint> beachline;
     multiset<Event> events;
+    vector<Edge> edges;
     bool is_equal(breakpoint b1, breakpoint b2){
         return b1.f1 == b2.f1 && b1.f2 == b2.f2;
-        }
+    }
     void handle_site_event(Point p0) {
         if (beachline.empty()) {
             // If the beachline is empty, just insert p0 as a breakpoint with itself
@@ -232,8 +272,6 @@ class Beachline{
             
             auto b4 = breakpoint(b1->f1, b2->f2);
            
-            // auto a = (it->b1);
-            // auto k = (it->b2);
             auto a = *(b1);
             auto k = *(b2);
             std::cout<<"This is b1"<<endl;
@@ -256,6 +294,8 @@ class Beachline{
                         events.erase(f);
                     }
                 }
+                std::cout<<"Time to insert a newcircle at left end"<<endl;
+                if(check_clockwise(*b0, b4)) cout<<"YES"<<endl;
                 if(getCircleEvent(*b0, b4).y <= directrix && check_clockwise(*b0, b4)){
                     cout<<"Circle inserted using"<<endl;
                     auto x = *b0;
@@ -281,6 +321,7 @@ class Beachline{
                         
                     }
                 }
+                std::cout<<"Time to insert a newcircle at right end"<<endl;
                 if(getCircleEvent(b4, *b3).y <= directrix && check_clockwise(b4, *b3)){
                     cout<<"Circle inserted using"<<endl;
                     auto x = *b3;
@@ -293,6 +334,14 @@ class Beachline{
                 }
                 
             }
+            Point ending = getCircumcentre(b1->f1, b1->f2, b2->f2);
+            auto b1p = *b1;
+            Edge e1 = Edge(b1p.edge.start, ending);
+            edges.push_back(e1);
+            auto b2p = *b2;
+            Edge e2 = Edge(b2p.edge.start, ending);
+            edges.push_back(e2);
+            // b4.edge.start = ending;
             beachline.erase(b1);
             beachline.erase(b2);
             beachline.insert(b4);
@@ -305,10 +354,12 @@ class Beachline{
 
 int main(){
     vector<Point> points ;
-    for(int i=0 ; i< 15; i++){
+    int n;
+    cin>>n;
+    for(int i=0 ; i< n; i++){
         double x, y;
         cin>>x>>y;  
-        points.push_back(Point(x, y));
+        points.push_back(Point(x, y, i+1));
     }
     // vector<Point> points = {Point(1, 7), Point(5, 20), Point(50, 30), Point(7, -100)};
     Beachline b;
@@ -332,7 +383,7 @@ int main(){
             b.handle_circle_event(e);
         }
         cout<<"Beachline"<<endl;
-        for(auto i: b.beachline){i.printit();}
+        for(auto i: b.beachline){cout<<i.f1.index<<" "<<i.f2.index<<endl;}
         std::cout<<endl;
         b.events.erase(b.events.begin());
         cout<<"event queue"<<endl;
@@ -343,10 +394,21 @@ int main(){
         }
         cout<<"----------"<<endl;
     }
-    
+
+    directrix = -1000;
+    for(auto i: b.beachline){
+        i.edge.end = i.get_current_intersection_point();    
+        b.edges.push_back(i.edge);
+    }   
     cout<<endl;
     std::cout<<"reached here"<<endl;
-    for(auto i: b.beachline){
-        i.printit();}
+    for(auto i: b.edges){
+        i.printit();
+    }
+    std::ofstream file("edges.txt");
+    for(auto i: b.edges){
+        file << i.start.x << "," << i.start.y << " " << i.end.x << "," << i.end.y << std::endl;
+    }
+    file.close();
     
 }
